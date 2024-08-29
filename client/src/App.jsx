@@ -9,7 +9,7 @@ function App() {
     const currency = 'INR';
     const receiptId = '1234567890';
 
-    const response = await fetch('http://localhost:5000/order', {
+    const response = await fetch('https://razorpay-payment-gateway-six.vercel.app/order', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ function App() {
           
           const body = {...response,}
 
-          const validateResponse = await fetch('http://localhost:5000/validate', {
+          const validateResponse = await fetch('https://razorpay-payment-gateway-six.vercel.app/validate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
